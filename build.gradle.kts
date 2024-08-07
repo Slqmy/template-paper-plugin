@@ -102,24 +102,11 @@ bukkitPluginYaml {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
+            from(components["java"])
+
             groupId = projectGroupString
             artifactId = projectNameString
             version = projectVersionString
-
-            fun artifactPath(classifier: String): String {
-              return buildDirectoryString + "/libs/" + projectNameString + "-" + projectVersionString + "-" + classifier + ".jar"
-            }
-
-            val devAllClassifier = "dev-all"
-            val devClassifier = "dev"
-
-            artifact(artifactPath(devAllClassifier)) {
-                classifier = devAllClassifier
-            }
-
-            artifact(artifactPath(devClassifier)) {
-                classifier = devClassifier
-            }
         }
     }
 }
