@@ -7,7 +7,7 @@ plugins {
 
   `maven-publish`
 
-  id("io.papermc.paperweight.userdev") version "1.7.1"
+  id("io.papermc.paperweight.userdev") version "1.7.2"
   id("xyz.jpenilla.resource-factory-bukkit-convention") version "1.1.1"
   id("xyz.jpenilla.run-paper") version "2.3.0"
 
